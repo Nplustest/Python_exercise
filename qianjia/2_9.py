@@ -16,7 +16,6 @@ print((4<5) and (10<5))
 
 '''
 
-
 #if
 #print('请输入姓名'+':')
 #name=input()

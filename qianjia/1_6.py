@@ -6,7 +6,7 @@ myName=input()
 print('Welcome '+myName+'!')
 '''
 
-#len()函数
+#len()函数zz
 #print(len('hello'))
 
 '''
