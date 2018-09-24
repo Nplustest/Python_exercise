@@ -23,7 +23,7 @@ try:
 except ZeroDivisionError:
 	print('Error: Invalid argument.')
 '''
-
+'''
 #猜数字
 import random
 secret = random.randint(1,12)
@@ -41,3 +41,31 @@ if guess == secret:
 	print('GOOD!')
 else:
 	print('The number I was thinking of was '+ str(secret))
+'''
+#Collatz序列
+'''
+def collatz(number):
+	if (int(number)%2) == 0:
+		return number//2
+	elif (int(number)%2) == 1:
+		return 3*number + 1
+'''
+
+def collatz(number):
+        while number != 1:            
+                if number % 2 == 0:
+                        number = number // 2        
+                        print (number)
+                elif number % 2 == 1:
+                        number = 3*number+1
+                        print (number)
+while True:
+        try:	
+                number = int(input('Enter a number: '))
+                print (number)
+                collatz(number)
+        except ValueError:
+                print('Not a integera. Please input a integera.')
+
+
+
