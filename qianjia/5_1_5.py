@@ -100,5 +100,13 @@ for character in message:
     count[character]=count[character]+1
 print(count)
 
+print('--------------------------')
+
 for k,v in count.items():
     print(k+':'+str(v)+'次')
+
+print('--------------------------')
+print('--------------------------')
+
+import pprint
+pprint.pprint(count)
