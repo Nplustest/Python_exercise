@@ -29,9 +29,18 @@ print(list)
 for k,v in spam.items():
 	print(k)
 	print(v)
-	'''
+
 #setdefault()方法该键不存在时要设置的值。如果该键确实存在，方法就会返回键的值
 spam = {'name':'Hou','age':24}
 spam.setdefault('color','black')
 print(spam)
 print(spam.setdefault('color','white'))
+	'''
+#setdefault()可以计算每个字符出现的次数
+message = 'It was a bright cold day in April,and the clocks were striking thirteen.'
+count = {}
+for char in message:
+	count.setdefault(char,0)
+	count[char] = count[char]+1
+	
+print(count)
