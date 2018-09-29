@@ -46,13 +46,25 @@ def totalBrought(guests,name):
 print('apples '+str(totalBrought(all,'apples')))
 print(all['Alice'])
 '''
-stuff = {'rope':1,'torch':6,'gold coin':42,'dagger':1,'arrow':12}
+#stuff = {'rope':1,'torch':6,'gold coin':42,'dagger':1,'arrow':12}
 
 def displayInventory(inventory):
 	count = 0
 	for k,v in inventory.items():
-		print(str(v)+''+k)
+		print(str(v)+' '+k)
 		count += v
 	print('物品总数:'+str(count))
-displayInventory(stuff)
+#displayInventory(stuff)
 
+def addToInventory(inventory,addedItems):
+	for item in dragonLoot:
+		if item not in inventory.keys():
+			inventory.setdefault(item,1)
+		else:
+			inventory[item] += 1
+			
+inv = {'gold coin':42,'rope':1}
+dragonLoot = ['gold coin','dagger','gold coin','gold coin']
+inv = addToInventory(inv,dragonLoot)
+print(inv)
+displayInventory(inv)
